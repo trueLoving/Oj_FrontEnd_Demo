@@ -180,7 +180,7 @@ export default {
       this.$emit("language-change", text);
     },
     submit() {
-      console.log(this.code);
+      this.$emit('submit',this.coder.getValue());
     },
     reset() {
       this.coder.setValue("");

@@ -5,7 +5,7 @@
         <Problem :p="problem"></Problem>
       </el-col>
       <el-col :span="12">
-        <CodeEditor></CodeEditor>
+        <CodeEditor @submit="submit"></CodeEditor>
       </el-col>
     </el-row>
   </div>
@@ -34,6 +34,11 @@ export default {
           description:"最大子数组为 3, 10, -4, 7, 2"
         }
       }
+    }
+  },
+  methods:{
+    submit(value){
+      this.$message.success('代码：'+value)
     }
   }
 }
