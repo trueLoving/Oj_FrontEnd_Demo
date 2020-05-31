@@ -76,7 +76,7 @@ export default {
     // 外部传入的语法类型
     language: {
       type: String,
-      default: "null"
+      default: "C"
     }
   },
   data() {
@@ -117,7 +117,7 @@ export default {
       // 编辑器赋值
       this.coder.setValue(this.value || this.code);
       // 设置编译器的宽度和高度
-      this.coder.setSize("100%", "550px");
+      this.coder.setSize("100%", "80vh");
 
       // 支持双向绑定
       this.coder.on("change", coder => {
